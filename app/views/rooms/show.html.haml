@@ -2,3 +2,8 @@
 
 #messages
   = render @messages
+
+%form
+  %label Your Message:
+  %br
+  %input{type: "text", 'data-behavior': "room_speaker"}
