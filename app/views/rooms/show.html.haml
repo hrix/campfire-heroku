@@ -14,7 +14,7 @@
         .input-group
           %input.form-control{placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
           %span.input-group-btn
-            %a.btn.btn-success{:type => "button", :href => "#"} Send
+            =link_to 'Send', '#', type: 'button', class: 'btn btn-success', 'data-behavior': "room_speaker"
 
 
 
