@@ -20,7 +20,7 @@ $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
     event.target.value = ''
     event.preventDefault()
 
-#========== Sending message on btn click ==========
+#========== Sending message on btn click =========
 $(document).on 'click', '#send-button', (event) ->
   input = document.getElementById('send-string')
   App.room.speak input.value
