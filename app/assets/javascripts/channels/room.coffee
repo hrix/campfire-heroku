@@ -7,6 +7,8 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
     $('#messages').append data['message']
+    element = document.getElementById('panel-body')
+    element.scrollTop = element.scrollHeight
 
   speak: (message) ->
     @perform 'speak', message: message

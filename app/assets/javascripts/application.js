@@ -16,4 +16,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
+//= require rooms/show.js
+
 
