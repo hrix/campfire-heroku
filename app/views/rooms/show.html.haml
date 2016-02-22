@@ -12,9 +12,9 @@
         %label Your Message:
         %br
         .input-group
-          %input.form-control{placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
+          %input.form-control{id: 'send-string', placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
           %span.input-group-btn
-            =link_to 'Send', '#', type: 'button', class: 'btn btn-success', 'data-behavior': "room_speaker"
+            =link_to 'Send', '#', type: 'button', id: 'send-button', class: 'btn btn-success', 'data-behavior': "room_speaker"
 
 
 
