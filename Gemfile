@@ -32,6 +32,9 @@ gem 'redis', '~> 3.0'
 
 gem 'haml'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootswatch-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
