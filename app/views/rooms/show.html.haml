@@ -7,8 +7,14 @@
 
 .form-group
   .row
-    .col-md-3
+    .col-md-5
       %form
         %label Your Message:
         %br
-        %input.form-control{type: "text", 'data-behavior': "room_speaker"}
+        .input-group
+          %input.form-control{placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
+          %span.input-group-btn
+            %a.btn.btn-success{:type => "button", :href => "#"} Send
+
+
+
