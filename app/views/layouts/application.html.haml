@@ -26,6 +26,5 @@
                   Log in
 
     .container-fluid
-      %p.notice= notice
-      %p.alert= alert
+      = render 'layouts/messages'
       = yield
