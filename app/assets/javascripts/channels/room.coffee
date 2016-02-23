@@ -10,13 +10,14 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     element = document.getElementById('panel-body')
     element.scrollTop = element.scrollHeight
 
-  speak: (message) ->
-    @perform 'speak', message: message
+  speak: (params) ->
+    @perform 'speak', message: params[0], owner_id: params[1]
 
 #========== Sending message on 'Enter' keypress ==========
 $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
   if event.keyCode is 13 #true <- enter == send
-    App.room.speak event.target.value
+    params = [event.target.value, event.target.getAttribute('owner-id')]
+    App.room.speak params
     event.target.value = ''
     event.preventDefault()
 

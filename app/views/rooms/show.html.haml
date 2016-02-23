@@ -12,7 +12,7 @@
         %label Your Message:
         %br
         .input-group
-          %input.form-control{id: 'send-string', placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
+          %input.form-control{'owner-id':"#{current_user.id}", id: 'send-string', placeholder: 'Type your message...', type: "text", 'data-behavior': "room_speaker"}
           %span.input-group-btn
             =link_to 'Send', '#', type: 'button', id: 'send-button', class: 'btn btn-success', 'data-behavior': "room_speaker"
 

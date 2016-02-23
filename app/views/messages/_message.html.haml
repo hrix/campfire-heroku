@@ -1,5 +1,5 @@
 .message
   %p
     = "[#{message.created_at.strftime("%H:%M:%S")}]"
-    %b #{current_user.email}
+    %b= "#{message.user.fullname}:"
     = message.content
