@@ -12,7 +12,18 @@
         .navbar-header
           = link_to 'Campfire', root_path, class: 'navbar-brand'
         .navbar-collapse.collapse#navbar-main
-
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li
+                = link_to "#{current_user.email}", '#'
+              %li
+                = link_to destroy_user_session_path, method: :delete do
+                  %i.glyphicon.glyphicon-log-out
+            -else
+              %li
+                = link_to new_user_session_path do
+                  %i.glyphicon.glyphicon-log-in
+                  Log in
 
     .container-fluid
       %p.notice= notice
