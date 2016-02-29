@@ -10,4 +10,8 @@ class User < ApplicationRecord
     "#{firstname} #{lastname}"
   end
 
+  def online?
+    $redis_onlines.exists( self.id )
+  end
+
 end

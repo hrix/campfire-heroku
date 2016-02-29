@@ -37,6 +37,8 @@ gem 'bootswatch-rails'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'master'
 
+gem 'hiredis'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

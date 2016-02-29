@@ -1,5 +1,5 @@
 - flash.each do |key, value|
   .alert.alert-dismissable{class: "#{bootstrap_class_for(key)} fade in"}
     %button.close{"data-dismiss" => "alert", :type => "button"} ×
-    %strong #{key}
+    %strong #{key.capitalize}!
     = value
