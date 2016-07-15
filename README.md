@@ -6,3 +6,4 @@ To run this app just:
 
 * rails db:migrate
 * rails s
+# campfire-heroku
