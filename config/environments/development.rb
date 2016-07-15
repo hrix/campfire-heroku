@@ -56,4 +56,7 @@ Rails.application.configure do
 
   #devise mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # WebSocketの接続元の制限を緩める
+  config.action_cable.allowed_request_origins = [ /https?:\/\/.*/ ]
 end

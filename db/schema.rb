@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(version: 20160223140228) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
