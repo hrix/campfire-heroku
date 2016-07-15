@@ -34,6 +34,8 @@ gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 
+gem 'rails_12factor', group: :production
+
 gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'master'
 
 gem 'hiredis'
